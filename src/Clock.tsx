@@ -18,16 +18,16 @@ export const Clock = () => {
       </div>
       {/* Time and emoji container */}
       <div className="absolute inset-0 m-2.5 flex flex-col items-center justify-center gap-2 bg-[#242424]">
-        <div>
-          <p className="text-5xl">{"☀️"}</p>
-        </div>
         <div className="flex flex-col">
-          <p className="text-center text-5xl">
-            {date.toLocaleTimeString([], {
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
-            <p>{date.getSeconds()}</p>
+          <p className="space-x-0 text-center text-8xl font-bold text-white">
+            {
+              date
+                .toLocaleTimeString([], {
+                  hour: "numeric",
+                  minute: "2-digit",
+                })
+                .split(" ")[0]
+            }
           </p>
         </div>
       </div>
