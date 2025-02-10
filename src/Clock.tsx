@@ -11,12 +11,14 @@ export const Clock = () => {
   }, []);
 
   const SecondTickMarks = () => {
+    const current_second = date.getSeconds();
+
     return (
       <div className="relative h-full w-full">
         {Array.from({ length: 60 }).map((_, i) => (
           <div
             key={i}
-            className="absolute top-0 left-1/2 h-[300px] w-0.5 bg-white"
+            className={`{} absolute top-0 left-1/2 h-[300px] w-0.5 ${i === current_second ? "bg-transparent" : "bg-white"}`}
             style={{
               transform: `rotate(${i * 6}deg) translateY(-145px)`,
               transformOrigin: "center",
