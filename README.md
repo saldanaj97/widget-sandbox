@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# **MVP for Welcome Page Extension**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The goal is to build a **simple, functional** browser extension that replaces the new tab page with a minimalist clock, similar to Momentum.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Core Features for MVP**
 
-## Expanding the ESLint configuration
+✅ **Clock Display**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 🕒 Digital clock that updates in real-time
+- 📆 Option to show date (optional toggle)
 
-- Configure the top-level `parserOptions` property like this:
+✅ **Basic UI**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Minimalist design using **Tailwind CSS**
+- Centered, full-screen layout with clean typography
+- Dark mode support
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+✅ **Browser Extension Setup**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Chrome & Firefox support
+- `manifest.json` to override the new tab page
+- Icons & metadata for proper extension branding
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+✅ **Build & Deployment**
+
+- **Frontend:** React + Vite
+- **Packaging:** Vite build output as an unpacked extension
+- **Local Testing:** Chrome `chrome://extensions/` & Firefox `about:debugging#/runtime/this-firefox`
+
+---
+
+## **Future Enhancements (Post-MVP)**
+
+🚀 **Personalized Greetings** – "Good Morning, [User]!" based on time 📖 **Inspirational Quotes** – Fetch & display random motivational quotes 🌤️ **Weather Widget** – Show local weather info using OpenWeather API 📝 **To-Do List** – Simple productivity feature with local storage 🎨 **Customizable Themes** – Users can switch colors, fonts, or backgrounds 📲 **Mobile PWA Version** – Extend to mobile-friendly usage
