@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { CalenderWidget } from "./Calender";
 import { ClockWidget } from "./Clock";
+import { WeatherWidget } from "./Weather";
 
 function App() {
   const [widgetToDisplay, setWidgetToDisplay] = useState("clock");
@@ -25,6 +26,14 @@ function App() {
             Calender
           </button>
         )}
+        {widgetToDisplay !== "weather" && (
+          <button
+            className="rounded-2xl bg-black p-4"
+            onClick={() => setWidgetToDisplay("weather")}
+          >
+            Weather
+          </button>
+        )}
       </>
     );
   };
@@ -42,6 +51,12 @@ function App() {
           <>
             <h1 className="text-6xl font-bold">Calender Widget</h1>
             <CalenderWidget />
+          </>
+        )}
+        {widgetToDisplay === "weather" && (
+          <>
+            <h1 className="text-6xl font-bold">Weather Widget</h1>
+            <WeatherWidget />
           </>
         )}
         <WidgetButtons />
