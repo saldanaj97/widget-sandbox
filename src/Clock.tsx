@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const Clock = () => {
+export const ClockWidget = () => {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {

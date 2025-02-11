@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Clock } from "./Clock";
+import { ClockWidget } from "./Clock";
 
 function App() {
   const [widgetToDisplay, setWidgetToDisplay] = useState("clock");
@@ -34,7 +34,7 @@ function App() {
         {widgetToDisplay === "clock" && (
           <>
             <h1 className="text-6xl font-bold">Clock Widget</h1>
-            <Clock />
+            <ClockWidget />
           </>
         )}
         <WidgetButtons />
