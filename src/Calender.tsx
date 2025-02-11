@@ -43,7 +43,7 @@ export const CalenderWidget = () => {
       <div className="relative h-[300px] w-[300px] overflow-hidden rounded-2xl shadow-2xl">
         <div className="absolute inset-0 flex flex-col items-center justify-evenly bg-[#242424] p-4">
           <p className="text-6xl font-bold text-white">{month}</p>
-          <p className="text-6xl font-bold text-white">{date_num}</p>
+          <p className="text-8xl font-bold text-white">{date_num}</p>
           <p className="text-3xl font-semibold text-white">{day}</p>
         </div>
       </div>
