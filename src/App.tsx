@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import { CalenderWidget } from "./Calender";
-import { ClockWidget } from "./Clock";
-import { WeatherWidget } from "./Weather";
+import { CalenderWidget } from "./widgets/Calender";
+import { ClockWidget } from "./widgets/Clock";
+import { WeatherWidget } from "./widgets/Weather";
 
 function App() {
   const [widgetToDisplay, setWidgetToDisplay] = useState("clock");
