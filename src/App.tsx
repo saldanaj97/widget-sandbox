@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { CalenderWidget } from "./Calender";
 import { ClockWidget } from "./Clock";
 
 function App() {
@@ -35,6 +36,12 @@ function App() {
           <>
             <h1 className="text-6xl font-bold">Clock Widget</h1>
             <ClockWidget />
+          </>
+        )}
+        {widgetToDisplay === "calender" && (
+          <>
+            <h1 className="text-6xl font-bold">Calender Widget</h1>
+            <CalenderWidget />
           </>
         )}
         <WidgetButtons />
